@@ -1,0 +1,10 @@
+Name: "install-dep"
+Image: "harbor.smoa.cc/fayez/cuda121conda:runtime"
+Command: "source ~/.bashrc; conda activate cnet++; ~/cnet/ControlNet_Plus_Plus; export 
+  PYTHONPATH=. ; pip3 install -r requirements.txt; pip3 install -U openmim; mim install mmengine; pip3 install mmdet;
+pip3 install clean-fid;  pip3 install torchmetrics"
+GPUType: 4090D
+GPU: 0                          # optional
+Debug: false                     # optional
+#Exclude: node75
+#Node: node59                     # optional
